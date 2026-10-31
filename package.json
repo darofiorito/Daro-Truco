@@ -1,0 +1,17 @@
+{
+  "name": "daro-truco-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prototipo multijugador de DARO TRUCO con salas y torneos de demostraci\u00f3n",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "helmet": "^8.1.0",
+    "express-rate-limit": "^7.5.0"
+  }
+}

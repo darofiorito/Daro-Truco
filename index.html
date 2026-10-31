@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DARO TRUCO</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="wrap">
+<header><div class="logo">DARO<br>TRU<span>●</span>CO</div><span class="online" id="connection">Conectando…</span></header>
+<section class="hero"><div><small>TRUCO ARGENTINO ONLINE</small><h1>EL TRUCO<br>SE JUEGA ACÁ.</h1><p>Entrá a torneos automáticos o creá una sala visible para todos.</p></div></section>
+<section class="profile"><label>Tu nombre <input id="playerName" maxlength="18" value="Jugador"></label><button id="saveName">Guardar</button></section>
+<div class="columns">
+<section><h2>🏆 10 torneos automáticos</h2><p class="muted">Nueva tanda cada 30 minutos · importes de demostración</p><div id="tournaments" class="stack"></div></section>
+<section><h2>🔒 Salas creadas por jugadores</h2><p class="muted">Cualquier conectado puede verlas y unirse.</p>
+<div class="panel"><label>Nombre de sala <input id="roomName" value="Mesa nueva" maxlength="30"></label>
+<label>Modalidad <select id="mode"><option>1 vs. 1</option><option>2 vs. 2</option><option>1 vs. 1 vs. 1</option></select></label>
+<label>Entrada de prueba <select id="entry"><option value="500">$500</option><option value="800">$800</option><option value="1000">$1.000</option><option value="1500">$1.500</option><option value="2000">$2.000</option><option value="3000">$3.000</option><option value="5000">$5.000</option><option value="10000">$10.000</option></select></label>
+<button class="primary" id="createRoom">＋ Crear sala</button></div><div id="rooms" class="stack"></div></section>
+</div>
+<section class="game panel" id="game" hidden><div class="gameHead"><div><h2 id="gameTitle">Mesa</h2><p id="gameInfo" class="muted"></p></div><button id="leaveRoom" class="ghost">Salir</button></div><div id="players" class="players"></div><div class="felt"><div class="cards"><span>🂡</span><span>🂮</span><span>🂫</span></div><p>Zona de juego · demo de sincronización</p></div><div class="actions"><button data-action="Jugó una carta">Jugar carta</button><button data-action="Cantó envido">Envido</button><button data-action="Cantó truco">Truco</button></div><div id="feed" class="feed"></div></section>
+<p class="disclaimer">Prototipo multijugador. Los importes son solo etiquetas de demostración: no hay depósitos, retiros, apuestas ni premios reales. Para habilitar dinero real hacen falta las autorizaciones aplicables y una integración de pagos regulada.</p>
+</main><script src="/socket.io/socket.io.js"></script><script src="/client.js"></script></body></html>
